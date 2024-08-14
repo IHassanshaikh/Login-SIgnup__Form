@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{>header}}
+      <title>Login</title>
+</head>
+<body>
+    <div class="container loginform">
+        <div class="text-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Iqra_University_logo.png"
+                class="img-fluid mt-5 iqralogo" alt="...">
+        </div>
+        <div class="row justify-content-center mb-5 mt-0">
+            <div>
+                <form class="login-form" action="/login" method="POST">
+                    <div class="login-form-heading">
+                        <div class="mb-0 h2 ">Employee Login</div>
+                    </div>
+
+                    <!-- Username input with icon -->
+                    <div class="form-group mb-3">
+                        <label for="email" class="form-label visually-hidden">Email</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                            <input type="text" id="username" name="email" class="form-control" placeholder="Email"
+                                required>
+                        </div>
+                    </div>
+
+                    <!-- Password input with icon -->
+                    <div class="form-group mb-3">
+                        <label for="password" class="form-label visually-hidden">Password</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                            <input type="password" id="password" name="password" class="form-control"
+                                placeholder="Password" required>
+                        </div>
+                    </div>
+
+                    <!-- Submit button -->
+                    <div class=" d-flex flex-row">
+                        <div class="form-group m-2">
+                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        </div>
+                        <div class="m-2">
+                            <a href="/signup" class="btn btn-primary">Signup</a>
+                        </div>
+                    </div>
+                    <!-- Optional: Forgot password link -->
+                    <div class="form-group text-center">
+                        <a href="#" class="text-decoration-none">Forgot password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<style>
+    .iqralogo {
+        width: 250px;
+    }
+
+    body {
+         background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB-8d_DBHUY6lFoyjDu4SL3hO-UqdziMVYFA&s);
+        background-repeat: no-repeat;
+        background-size: 2800px;
+    }
+
+    .login-form {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-top: 100px;
+        background-color: #f8f9fa;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-form-heading {
+        background-color: #343a40;
+        color: #ffffff;
+        padding: 15px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .list-unstyled {
+        font-size: small;
+    }
+
+    .nav-link {
+        color: white;
+    }
+
+    .nav-link:hover {
+        color: rgb(207, 207, 207);
+    }
+
+    .iqralogo {
+        width: 250px;
+    }
+</style>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{>header}}
+      <title>Registeration form</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="container loginform">
+        <div class="text-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Iqra_University_logo.png"
+                class="img-fluid mt-5 iqralogo" alt="Iqra University Logo">
+        </div>
+        <div class="row justify-content-center mb-5 mt-0">
+            <div>
+                <form class="login-form" action="/signup" method="POST"  id="registrationForm">
+                    <div class="login-form-heading">
+                        <div class="mb-0 h2">Register</div>
+                    </div>
+
+                    <!-- First Name input with icon -->
+                    <div class="form-group mb-3">
+                        <label for="firstName" class="form-label visually-hidden">First Name</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                            <input type="text" id="firstName" name="firstName" class="form-control" placeholder="First Name"
+                                required>
+                        </div>
+                    </div>
+
+                    <!-- Last Name input with icon -->
+                    <div class="form-group mb-3">
+                        <label for="lastName" class="form-label visually-hidden">Last Name</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                            <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Last Name"
+                                required>
+                        </div>
+                    </div>
+
+                    <!-- Email input with icon -->
+                    <div class="form-group mb-3">
+                        <label for="email" class="form-label visually-hidden">Email</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                        </div>
+                    </div>
+
+                    <!-- Phone Number input with icon -->
+                    <div class="form-group mb-3">
+                        <label for="phone" class="form-label visually-hidden">Phone Number</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone Number" required>
+                        </div>
+                    </div>
+
+                    <!-- Age input with icon -->
+                    <div class="form-group mb-3">
+                        <label for="age" class="form-label visually-hidden">Age</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                            <input type="number" id="age" name="age" class="form-control" placeholder="Age" required min="0">
+                        </div>
+                    </div>
+
+                    <!-- Password input with icon -->
+                    <div class="form-group mb-3">
+                        <label for="password" class="form-label visually-hidden">Password</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                            <input type="password" id="password" name="password" class="form-control"
+                                placeholder="Password" required>
+                        </div>
+                    </div>
+
+                   <div class="form-group mb-3">
+                        <label for="confirmPassword" class="form-label visually-hidden">Confirm Password</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                            <input type="password" id="confirmPassword" name="confirmPassword" class="form-control"
+                                placeholder="Confirm Password" required>
+                        </div>
+                    </div>
+
+                    <!-- Error message for password mismatch -->
+                    <div class="form-group mb-3 text-danger" id="passwordError" style="display: none;">
+                        Passwords do not match.
+                    </div>
+
+                    <!-- Submit button -->
+                    <div class="d-flex flex-row">
+                        <div class="form-group m-2">
+                            <button type="submit" class="btn btn-primary btn-block">Register</button>
+                        </div>
+                        <div class="m-2">
+                            <a href="/" class="btn btn-primary">Login</a>
+                        </div>
+                    </div>
+                    <!-- Optional: Forgot password link -->
+                    <div class="form-group text-center">
+                        <a href="#" class="text-decoration-none">Forgot password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<style>
+    .iqralogo {
+        width: 250px;
+    }
+
+    body {
+         background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB-8d_DBHUY6lFoyjDu4SL3hO-UqdziMVYFA&s);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .login-form {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-top: 100px;
+        background-color: #f8f9fa;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-form-heading {
+        background-color: #343a40;
+        color: #ffffff;
+        padding: 15px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .list-unstyled {
+        font-size: small;
+    }
+
+    .nav-link {
+        color: white;
+    }
+
+    .nav-link:hover {
+        color: rgb(207, 207, 207);
+    }
+
+    .iqralogo {
+        width: 250px;
+    }
+</style>
